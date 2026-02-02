@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CallCraft Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">📞</div>
+        <div class="logo-text">CallCraft <span>Pro</span></div>
+      </div>
+
+      <div class="user-card">
+        <div class="avatar">
+          <span>H</span>
+          <div class="level-badge">Rookie</div>
+        </div>
+        <div class="user-info">
+          <h3>Heather</h3>
+          <p>Sales Trainee</p>
+        </div>
+        <div class="user-stats">
+          <div><span>Call Points</span><strong>2,450</strong></div>
+          <div><span>Streak</span><strong>7 days</strong></div>
+          <div><span>Rank</span><strong>#245 Global</strong></div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-page="dashboard">🏠 Dashboard</button>
+        <button class="nav-item" data-page="call-simulator">📱 Practice Calls</button>
+        <button class="nav-item" data-page="analytics">📊 Analytics</button>
+        <button class="nav-item" data-page="scenarios">📚 Scenario Library</button>
+        <button class="nav-item" data-page="community">👥 Community</button>
+        <button class="nav-item" data-page="profile">🏆 Achievements & Profile</button>
+        <button class="nav-item" data-page="settings">⚙️ Settings</button>
+        <button class="nav-item" data-page="spec">📐 Product Spec</button>
+      </nav>
+
+      <div class="quick-stats">
+        <h4>Today</h4>
+        <div class="stat-row"><span>Today's Calls</span><strong>3/5</strong></div>
+        <div class="stat-row"><span>Weekly Goal</span><strong>12/20</strong></div>
+        <div class="stat-row"><span>Success Rate</span><strong>68%</strong></div>
+      </div>
+
+      <button class="btn primary full" data-page="call-simulator">
+        Start Practice
+      </button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <!-- DASHBOARD PAGE -->
+      <section id="dashboard" class="page visible">
+        <header class="page-header">
+          <h1>Ready for today's challenge, Heather?</h1>
+          <p>Sharpen your cold calling skills and keep your streak alive.</p>
+        </header>
+
+        <div class="grid-2">
+          <div class="card">
+            <h2>Daily Challenge</h2>
+            <h3>Objection Handling Tuesday</h3>
+            <p>Handle 5 price objections successfully.</p>
+            <div class="progress-row">
+              <span>Progress</span>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:60%"></div>
+              </div>
+              <span>3/5</span>
+            </div>
+            <p class="reward">Reward: 250 points + "Objection Crusher" badge</p>
+            <button class="btn primary" data-page="call-simulator">Start Challenge</button>
+          </div>
+
+          <div class="card">
+            <h2>Skill Progress</h2>
+            <p>Radar chart placeholder (Rapport, Discovery, Value Prop, Objections, Closing, Mechanics).</p>
+            <div class="tags">
+              <button class="tag weak">Practice Objections</button>
+              <button class="tag">Boost Discovery</button>
+              <button class="tag">Improve Closing</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h2>Recent Activity</h2>
+            <ul class="activity-list">
+              <li>
+                <span>Call with "TechCorp – Budget Objection"</span>
+                <strong>Score: 742</strong>
+              </li>
+              <li>
+                <span>Badge earned: "First 10 Calls"</span>
+                <strong>+100 pts</strong>
+              </li>
+              <li>
+                <span>Friend Alex hit 900+ score</span>
+                <strong>Motivation!</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Upcoming Features</h2>
+            <ul>
+              <li>Coming Soon: Live Peer Practice</li>
+              <li>New: Real Estate Scenarios</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CALL SIMULATOR PAGE -->
+      <section id="call-simulator" class="page">
+        <header class="call-header">
+          <button class="btn ghost" data-page="dashboard">← Back to Dashboard</button>
+          <div class="call-meta">
+            <span class="timer">⏱ 04:23</span>
+            <span class="recording">● Recording</span>
+            <span>Talk Ratio: 45%</span>
+            <span>Questions: 6</span>
+            <span>Score: 342</span>
+          </div>
+        </header>
+
+        <div class="call-layout">
+          <div class="card prospect-card">
+            <h2>Prospect</h2>
+            <div class="prospect-header">
+              <div class="prospect-avatar">A</div>
+              <div>
+                <h3>Alex Johnson</h3>
+                <p>IT Director, TechCorp Inc.</p>
+              </div>
+            </div>
+            <p class="bio">Busy, skeptical of cold calls, budget-conscious.</p>
+            <div class="mood">
+              <span>Mood</span>
+              <div class="mood-bar">
+                <div class="mood-fill"></div>
+              </div>
+              <span class="mood-label">Neutral</span>
+            </div>
+            <div class="thought-bubble">
+              "I have 5 minutes..."
+            </div>
+          </div>
+
+          <div class="card conversation-panel">
+            <h2>Conversation</h2>
+            <div class="transcript">
+              <div class="bubble you">
+                <p>Hi Alex, thanks for taking the time—how are things going today?</p>
+              </div>
+              <div class="bubble prospect">
+                <p>Busy, to be honest. What is this about?</p>
+              </div>
+              <div class="bubble you good">
+                <p>I’ll keep it brief. I work with IT leaders like you to cut support tickets by 30%.</p>
+                <span class="marker good">✓ Good practice</span>
+              </div>
+              <div class="bubble you bad">
+                <p>Our product is the best on the market, you should really see a demo.</p>
+                <span class="marker bad">✗ Too pushy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card feedback-panel">
+            <h2>Live Feedback</h2>
+            <div class="live-score">Score: <strong>342 / 1000</strong></div>
+            <div class="feedback-list">
+              <div class="feedback good">Great open question! +30 pts</div>
+              <div class="feedback warn">Let prospect speak more -20 pts</div>
+              <div class="feedback good">Used name personalization +15 pts</div>
+            </div>
+            <div class="metric">
+              <span>Rapport</span>
+              <div class="progress-bar small"><div class="progress-fill" style="width:40%"></div></div>
+            </div>
+            <div class="metric">
+              <span>Discovery</span>
+              <div class="progress-bar small"><div class="progress-fill" style="width:60%"></div></div>
+            </div>
+            <div class="metric">
+              <span>Value</span>
+              <div class="progress-bar small"><div class="progress-fill" style="width:30%"></div></div>
+            </div>
+            <div class="metric">
+              <span>Objections</span>
+              <div class="progress-bar small"><div class="progress-fill" style="width:20%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="call-controls">
+          <button class="btn round primary">🎙 Push to Talk</button>
+          <button class="btn ghost">🔇 Mute</button>
+          <button class="btn ghost">⏸ Pause</button>
+          <button class="btn ghost">💡 Script Hint</button>
+          <button class="btn danger">End Call</button>
+        </div>
+
+        <div class="card review-panel">
+          <h2>Post-Call Review</h2>
+          <p>Overall Score: <strong>742 / 1000 (B+)</strong></p>
+          <details>
+            <summary>Rapport Building: 185/200</summary>
+            <ul>
+              <li>✓ Used prospect's name 3 times</li>
+              <li>✓ Good tone warmth</li>
+              <li>⚠ Could use more empathy statements</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Discovery: 220/300</summary>
+            <ul>
+              <li>✓ Asked 4 open questions</li>
+              <li>✗ Missed budget question</li>
+              <li>⚠ Talked 60%, listened 40%</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Value Proposition: 195/250</summary>
+            <ul>
+              <li>✓ Clear value in first 90 seconds</li>
+              <li>✓ Used relevant case study</li>
+              <li>⚠ Could tailor more to prospect's industry</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Objection Handling: 142/200</summary>
+            <ul>
+              <li>✓ Acknowledged concerns</li>
+              <li>✗ Defended instead of questioning</li>
+              <li>⚠ No social proof provided</li>
+            </ul>
+          </details>
+
+          <div class="actions-row">
+            <button class="btn">View Transcript</button>
+            <button class="btn">Compare with Expert</button>
+            <button class="btn primary">Practice Action Items</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANALYTICS PAGE -->
+      <section id="analytics" class="page">
+        <header class="page-header">
+          <h1>Analytics Dashboard</h1>
+          <p>Track your progress, strengths, and blind spots over time.</p>
+        </header>
+
+        <div class="grid-2">
+          <div class="card">
+            <h2>Overview Metrics</h2>
+            <ul class="metrics-list">
+              <li><span>Total Calls</span><strong>147</strong></li>
+              <li><span>Average Score</span><strong>672</strong></li>
+              <li><span>Best Score</span><strong>912</strong></li>
+              <li><span>Improvement Rate</span><strong>+18% this month</strong></li>
+              <li><span>Time Practiced</span><strong>42 hours</strong></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2>Trends</h2>
+            <p>Placeholder for charts: 30-day score progression, category improvement, call duration distribution, best times of day.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Call Library</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Scenario</th>
+                <th>Score</th>
+                <th>Duration</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jan 25</td>
+                <td>SaaS: Price Objection</td>
+                <td>742</td>
+                <td>08:12</td>
+                <td><button class="btn small">Replay</button></td>
+              </tr>
+              <tr>
+                <td>Jan 24</td>
+                <td>Real Estate: Discovery Call</td>
+                <td>680</td>
+                <td>06:45</td>
+                <td><button class="btn small">Replay</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2>Personal Insights</h2>
+          <ul>
+            <li>You perform best on Tuesday mornings.</li>
+            <li>Your listening improved 25% this month.</li>
+            <li>Price objections are your weakest area.</li>
+            <li>Consider practicing more real estate scenarios.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SCENARIO LIBRARY PAGE -->
+      <section id="scenarios" class="page">
+        <header class="page-header">
+          <h1>Scenario Library</h1>
+          <p>Choose focused practice scenarios or build your own.</p>
+        </header>
+
+        <div class="filters card">
+          <h3>Filters</h3>
+          <div class="filter-row">
+            <label>Category</label>
+            <select>
+              <option>All</option>
+              <option>SaaS</option>
+              <option>Real Estate</option>
+              <option>Recruiting</option>
+              <option>Medical</option>
+            </select>
+          </div>
+          <div class="filter-row">
+            <label>Difficulty</label>
+            <select>
+              <option>Any</option>
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Expert</option>
+            </select>
+          </div>
+          <div class="filter-row">
+            <label>Duration</label>
+            <select>
+              <option>Any</option>
+              <option>&lt; 5 min</option>
+              <option>5–10 min</option>
+              <option>10+ min</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="scenario-grid">
+          <div class="card scenario-card">
+            <h3>SaaS: Price Objection Handling</h3>
+            <p>Difficulty: ★★★☆☆ · Duration: 8 minutes</p>
+            <p>Skills: Objections, Value Prop, Closing</p>
+            <p>Success Rate: 68% of users</p>
+            <button class="btn primary">Quick Start</button>
+          </div>
+          <div class="card scenario-card">
+            <h3>Real Estate: Discovery Call</h3>
+            <p>Difficulty: ★★☆☆☆ · Duration: 6 minutes</p>
+            <p>Skills: Discovery, Rapport</p>
+            <button class="btn">Preview</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Custom Scenario Builder</h2>
+          <ol>
+            <li>Prospect Details (name, title, company, personality)</li>
+            <li>Conversation Flow (prospect dialogue)</li>
+            <li>Learning Objectives (skills to test)</li>
+            <li>Scoring Criteria (point values)</li>
+            <li>Publish (private, public, or team-only)</li>
+          </ol>
+          <button class="btn primary">Create New Scenario</button>
+        </div>
+      </section>
+
+      <!-- COMMUNITY PAGE -->
+      <section id="community" class="page">
+        <header class="page-header">
+          <h1>Community & Peer Review</h1>
+          <p>Learn from others, share feedback, and grow together.</p>
+        </header>
+
+        <div class="grid-2">
+          <div class="card">
+            <h2>Peer Review Queue</h2>
+            <p>Anonymous calls waiting for your feedback.</p>
+            <ul class="activity-list">
+              <li>Call #128 – SaaS Objection Handling <button class="btn small">Review</button></li>
+              <li>Call #129 – Real Estate Discovery <button class="btn small">Review</button></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2>Study Groups</h2>
+            <ul>
+              <li>“Objection Crushers” – 12 members</li>
+              <li>“Real Estate Closers” – 8 members</li>
+            </ul>
+            <button class="btn primary">Join a Group</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Template Marketplace</h2>
+          <p>Browse user-submitted scripts and scenarios.</p>
+          <ul>
+            <li>“SaaS Discovery Script – 35% Reply Rate”</li>
+            <li>“Recruiting: Passive Candidate Outreach”</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROFILE & SETTINGS PAGE -->
+      <section id="profile" class="page">
+        <header class="page-header">
+          <h1>Your Profile & Achievements</h1>
+        </header>
+
+        <div class="grid-2">
+          <div class="card">
+            <h2>Profile</h2>
+            <p>Custom avatar, title/level, stats at a glance.</p>
+            <button class="btn">Edit Avatar</button>
+            <button class="btn">Copy Shareable Profile Link</button>
+          </div>
+          <div class="card">
+            <h2>Badges</h2>
+            <p>Badge wall placeholder.</p>
+            <ul class="badge-list">
+              <li>🎖 First 10 Calls</li>
+              <li>🔥 7-Day Streak</li>
+              <li>🏅 700+ Score Club</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="settings" class="page">
+        <header class="page-header">
+          <h1>Settings</h1>
+        </header>
+        <div class="card">
+          <h2>Audio Preferences</h2>
+          <p>Input/output devices, volume, test audio.</p>
+        </div>
+        <div class="card">
+          <h2>Notifications</h2>
+          <p>Daily challenge reminders, streak alerts, community updates.</p>
+        </div>
+        <div class="card">
+          <h2>Privacy & Subscription</h2>
+          <p>Control what’s shared, manage plan (Free / Pro / Teams / Enterprise).</p>
+        </div>
+      </section>
+
+      <!-- SPEC / ARCHITECTURE PAGE (YOUR “EXTRA” STUFF) -->
+      <section id="spec" class="page">
+        <header class="page-header">
+          <h1>Product Spec & Architecture</h1>
+          <p>This page captures the high-level plan behind CallCraft Pro.</p>
+        </header>
+
+        <div class="card">
+          <h2>Information Architecture</h2>
+          <ul>
+            <li>Dashboard → Daily Challenge, Activity, Skill Progress</li>
+            <li>Practice Calls → Call Simulator, Practice Modes</li>
+            <li>Analytics → Metrics, Trends, Call Library</li>
+            <li>Scenario Library → Browse, Filters, Builder</li>
+            <li>Community → Peer Review, Groups, Marketplace</li>
+            <li>Profile/Settings → Avatar, Badges, Preferences</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Example User Story</h2>
+          <p><strong>As a</strong> sales rep<br>
+             <strong>I want</strong> to run a quick practice call<br>
+             <strong>So that</strong> I can improve my objection handling before real calls.</p>
+          <p><strong>Acceptance Criteria:</strong></p>
+          <ul>
+            <li>“Start Practice” button is visible on the dashboard.</li>
+            <li>Clicking it opens the Call Simulator in Practice mode.</li>
+            <li>A default scenario loads with clear instructions.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Technical Architecture (High Level)</h2>
+          <ul>
+            <li>Frontend: This prototype (HTML/CSS/JS) → later can be migrated to React/Next.js.</li>
+            <li>Backend: API for scenarios, scores, users (Node/Express, Python, or similar).</li>
+            <li>Database: Users, Calls, Scenarios, Scores, Badges.</li>
+            <li>Real-time: WebSockets for live feedback and scoring.</li>
+            <li>Audio: Web Speech API + Web Audio API for voice and processing.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Branding & Content</h2>
+          <ul>
+            <li>Tone: Encouraging, direct, no fluff.</li>
+            <li>Colors: Confident Blue, Success Green, Warning Amber, Premium Purple.</li>
+            <li>Microcopy: Motivational (“Every ‘no’ gets you closer to ‘yes’”).</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
